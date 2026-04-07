@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FM Electronics | Mobile, Laptop & Tablet Repair</title>
+  <meta name="description"
+    content="FM Electronics offers premium mobile, laptop, and tablet repair services with fast diagnostics, quality parts, and direct WhatsApp ordering." />
+  <meta name="theme-color" content="#07111f">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="i-whatsapp" viewBox="0 0 448 512">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32 101.7 32 2.6 131.1 2.6 253.3c0 39.1 10.2 77.3 29.6 111L0 480l118.7-31.1c32.7 17.9 69.7 27.3 107.2 27.4h.1c122.3 0 221.4-99.1 221.4-221.3 0-59.3-23.1-115-65.1-156.9zM223.8 438.7c-33.2 0-65.7-8.9-94-25.7l-6.7-4-70.4 18.5 18.8-68.6-4.4-7c-18.5-29.4-28.2-63.4-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54 130.5-.1 101.8-82.9 184.6-184.6 184.6zm101.1-138.2c-5.5-2.8-32.8-16.1-37.9-17.9-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 17.9-17.6 21.6-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.3-4.5-10.8-9-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.5 19.1-19.5 46.4 0 27.4 20 53.8 22.8 57.5 2.8 3.7 39.4 60.2 95.4 84.3 35.2 15.2 49 16.5 66.6 14 10.7-1.6 32.8-13.4 37.4-26.3 4.6-12.9 4.6-23.9 3.2-26.3-1.3-2.4-5-3.8-10.5-6.6z" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M4 4h16v16H4z" fill="none" stroke-width="2" />
+      <path d="m22 6-10 7L2 6" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-location" viewBox="0 0 24 24">
+      <path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11z" fill="none" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+      <circle cx="12" cy="10" r="2.2" fill="none" stroke-width="2" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M20 6 9 17l-5-5" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24">
+      <rect x="7" y="2.5" width="10" height="19" rx="2.2" ry="2.2" fill="none" stroke-width="2" />
+      <path d="M11 18.5h2" fill="none" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24">
+      <path d="M4 6.5h16v10H4z" fill="none" stroke-width="2" />
+      <path d="M2 18.5h20" fill="none" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-tablet" viewBox="0 0 24 24">
+      <rect x="5" y="2.5" width="14" height="19" rx="2.2" fill="none" stroke-width="2" />
+      <path d="M11 18.5h2" fill="none" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="18" height="10" rx="2" fill="none" stroke-width="2" />
+      <path d="M22 10v4" fill="none" stroke-width="2" stroke-linecap="round" />
+      <path d="M6 10h4v4H6z" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24">
+      <rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke-width="2" />
+      <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4" fill="none" stroke-width="2"
+        stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3l7 3v6c0 4.97-3.05 8.95-7 10-3.95-1.05-7-5.03-7-10V6l7-3z" fill="none" stroke-width="2"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke-width="2" />
+      <path d="M12 7v6l4 2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 3.6 2.57 5.2 5.74.83-4.15 4.04.98 5.72L12 16.7 6.86 19.4l.98-5.72L3.7 9.63l5.74-.83L12 3.6z" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" fill="none" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+  </svg>
+
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" id="nav">
+        <a href="#home" class="brand">
+          <img src="logo.jpeg" alt="FM Electronics" style="height:42px;object-fit:contain;border-radius:10px;">
+          <span>
+            <small>Premium Repair Studio</small>
+            <strong>FM Electronics</strong>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <a class="btn btn-primary desktop-only wa-link"
+            data-message="Hello FM Electronics, I want to order a repair service for my device." target="_blank"
+            rel="noopener">
+            <svg class="icon">
+              <use href="#i-whatsapp"></use>
+            </svg>
+            Order Now
+          </a>
+          <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+            <svg class="icon" id="menuIcon">
+              <use href="#i-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="eyebrow">
+              <span class="dot"></span>
+              International Standard Device Repair
+            </div>
+            <h1>Mobile, Laptop & Tablet Repair You Can Trust</h1>
+            <p class="lead">
+              FM Electronics restores the devices you depend on every day. From cracked screens and weak batteries to
+              charging issues, software faults, and board-level diagnostics, we deliver fast, careful, premium-quality
+              repair service.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary wa-link"
+                data-message="Hello FM Electronics, I want to order a repair service. Please guide me on WhatsApp."
+                target="_blank" rel="noopener">
+                <svg class="icon">
+                  <use href="#i-whatsapp"></use>
+                </svg>
+                Order Now
+              </a>
+              <a href="#services" class="btn btn-dark">
+                <svg class="icon">
+                  <use href="#i-arrow"></use>
+                </svg>
+                Explore Services
+              </a>
+            </div>
+
+            <div class="hero-chips">
+              <a class="chip wa-link" data-message="Hello FM Electronics, I need support for my device repair."
+                target="_blank" rel="noopener">
+                <svg class="icon" style="color:#66f09a">
+                  <use href="#i-whatsapp"></use>
+                </svg>
+                WhatsApp Support
+              </a>
+              <a class="chip" href="tel:+1234567890">
+                <svg class="icon">
+                  <use href="#i-phone"></use>
+                </svg>
+                Call Us
+              </a>
+              <a class="chip" href="mailto:hello@fmelectronics.com">
+                <svg class="icon">
+                  <use href="#i-mail"></use>
+                </svg>
+                Email Us
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <strong>Same Day</strong>
+                <span class="muted">For many common repairs</span>
+              </div>
+              <div class="stat">
+                <strong>Quality Parts</strong>
+                <span class="muted">Reliable replacement components</span>
+              </div>
+              <div class="stat">
+                <strong>Expert Care</strong>
+                <span class="muted">Precision diagnostics & repair</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="glow one"></div>
+            <div class="glow two"></div>
+
+            <div class="device-card tablet">
+              <div class="topbar">
+                <span>Tablet Repair</span>
+                <svg class="icon" style="width:16px;height:16px;color:#66f09a">
+                  <use href="#i-tablet"></use>
+                </svg>
+              </div>
+              <div class="screen">
+                <div class="mini-title">
+                  <svg class="icon">
+                    <use href="#i-check"></use>
+                  </svg>
+                  Touch & display calibration
+                </div>
+                <div class="bars">
+                  <div class="bar"><span style="width:90%"></span></div>
+                  <div class="bar"><span style="width:74%"></span></div>
+                  <div class="bar"><span style="width:82%"></span></div>
+                </div>
+                <div class="tag-row">
+                  <span class="tag">Screen Repair</span>
+                  <span class="tag">Glass Replace</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="device-card laptop">
+              <div class="topbar">
+                <span>FM Electronics Diagnostics</span>
+                <svg class="icon" style="width:16px;height:16px;color:#7cc0ff">
+                  <use href="#i-laptop"></use>
+                </svg>
+              </div>
+              <div class="screen">
+                <div class="mini-title">
+                  <svg class="icon">
+                    <use href="#i-chip"></use>
+                  </svg>
+                  Repair progress in premium workflow
+                </div>
+                <div class="check-list">
+                  <div class="check"><span class="bullet"><svg class="icon" style="width:14px;height:14px">
+                        <use href="#i-check"></use>
+                      </svg></span><span>Logic board & charging diagnostics</span></div>
+                  <div class="check"><span class="bullet"><svg class="icon" style="width:14px;height:14px">
+                        <use href="#i-check"></use>
+                      </svg></span><span>Battery health and thermal testing</span></div>
+                  <div class="check"><span class="bullet"><svg class="icon" style="width:14px;height:14px">
+                        <use href="#i-check"></use>
+                      </svg></span><span>Data-safe repair handling</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="device-card phone">
+              <div class="topbar">
+                <span>Phone Repair</span>
+                <svg class="icon" style="width:16px;height:16px;color:#66f09a">
+                  <use href="#i-mobile"></use>
+                </svg>
+              </div>
+              <div class="screen">
+                <div class="mini-title">
+                  <svg class="icon">
+                    <use href="#i-battery"></use>
+                  </svg>
+                  Fast service
+                </div>
+                <div class="bars">
+                  <div class="bar"><span style="width:88%"></span></div>
+                  <div class="bar"><span style="width:67%"></span></div>
+                </div>
+                <div class="tag-row">
+                  <span class="tag">Battery</span>
+                  <span class="tag">Charging Port</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="dot"></span>Our Services</div>
+          <h2>Professional electronics repair for the devices that matter most</h2>
+          <p class="lead">
+            Modern electronics power communication, work, study, entertainment, and business. FM Electronics helps
+            extend device life with dependable repair, careful handling, and a customer-first service experience.
+          </p>
+        </div>
+
+        <div class="grid cards-3">
+          <div class="card reveal">
+            <div class="service-icon"><svg class="icon">
+                <use href="#i-mobile"></use>
+              </svg></div>
+            <h3>Mobile Phone Repair</h3>
+            <p>Screen replacement, battery issues, camera faults, charging problems, speaker repair, water-damage
+              inspection, and software troubleshooting for most smartphone models.</p>
+            <a class="service-link wa-link" data-message="Hello FM Electronics, I need mobile phone repair service."
+              target="_blank" rel="noopener">
+              Order mobile repair <svg class="icon" style="width:16px;height:16px">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon"><svg class="icon">
+                <use href="#i-laptop"></use>
+              </svg></div>
+            <h3>Laptop Repair</h3>
+            <p>Keyboard replacement, overheating solutions, hinge repair, SSD and RAM upgrades, display repair,
+              motherboard diagnostics, charging issues, and performance optimization.</p>
+            <a class="service-link wa-link" data-message="Hello FM Electronics, I need laptop repair service."
+              target="_blank" rel="noopener">
+              Order laptop repair <svg class="icon" style="width:16px;height:16px">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon"><svg class="icon">
+                <use href="#i-tablet"></use>
+              </svg></div>
+            <h3>Tablet Repair</h3>
+            <p>Broken glass, touchscreen failure, charging faults, battery replacement, software recovery, and internal
+              component repair for tablets used at home, school, and work.</p>
+            <a class="service-link wa-link" data-message="Hello FM Electronics, I need tablet repair service."
+              target="_blank" rel="noopener">
+              Order tablet repair <svg class="icon" style="width:16px;height:16px">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon"><svg class="icon">
+                <use href="#i-battery"></use>
+              </svg></div>
+            <h3>Battery & Charging</h3>
+            <p>Weak battery, sudden shutdowns, charging port damage, adapter checks, and power-management solutions to
+              restore safe and stable daily usage.</p>
+            <a class="service-link wa-link"
+              data-message="Hello FM Electronics, I need help with battery or charging repair." target="_blank"
+              rel="noopener">
+              Fix power issues <svg class="icon" style="width:16px;height:16px">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon"><svg class="icon">
+                <use href="#i-chip"></use>
+              </svg></div>
+            <h3>Software & Data Support</h3>
+            <p>Operating system issues, slow performance, app crashes, backup guidance, updates, virus removal, and
+              recovery support for important files where possible.</p>
+            <a class="service-link wa-link"
+              data-message="Hello FM Electronics, I need software or data support for my device." target="_blank"
+              rel="noopener">
+              Get software support <svg class="icon" style="width:16px;height:16px">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon"><svg class="icon">
+                <use href="#i-shield"></use>
+              </svg></div>
+            <h3>Premium Quality Promise</h3>
+            <p>Careful diagnostics, transparent communication, professional handling, and quality-focused workmanship
+              designed to give your electronics a longer useful life.</p>
+            <a class="service-link wa-link"
+              data-message="Hello FM Electronics, I want to know more about your premium repair service."
+              target="_blank" rel="noopener">
+              Ask about quality service <svg class="icon" style="width:16px;height:16px">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="split">
+          <div class="about-box reveal">
+            <div class="eyebrow"><span class="dot"></span>About FM Electronics</div>
+            <h2>Electronics keep the world connected. We keep electronics performing.</h2>
+            <p class="lead">
+              Smartphones, laptops, and tablets have become essential tools for communication, productivity, education,
+              creativity, and everyday convenience. A quality repair is often the smartest way to save money, protect
+              data, and extend the life of your device.
+            </p>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="bullet"
+                  style="width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:rgba(37,211,102,.14);border:1px solid rgba(37,211,102,.18);color:#8df5b1;flex:0 0 auto">
+                  <svg class="icon" style="width:18px;height:18px">
+                    <use href="#i-check"></use>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Precise diagnostics</h3>
+                  <p class="muted">We identify the real fault before repair, helping avoid unnecessary replacements and
+                    saving time.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="bullet"
+                  style="width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:rgba(37,211,102,.14);border:1px solid rgba(37,211,102,.18);color:#8df5b1;flex:0 0 auto">
+                  <svg class="icon" style="width:18px;height:18px">
+                    <use href="#i-check"></use>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Transparent service</h3>
+                  <p class="muted">Clear updates, honest guidance, and practical solutions for personal, student, and
+                    business devices.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="bullet"
+                  style="width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:rgba(37,211,102,.14);border:1px solid rgba(37,211,102,.18);color:#8df5b1;flex:0 0 auto">
+                  <svg class="icon" style="width:18px;height:18px">
+                    <use href="#i-check"></use>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Customer-first experience</h3>
+                  <p class="muted">Quick WhatsApp support, responsive communication, and a premium look and feel from
+                    booking to delivery.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-box reveal">
+            <div class="eyebrow"><span class="dot"></span>What We Repair</div>
+            <h2>From cracked screens to board-level issues</h2>
+            <p class="lead">
+              FM Electronics handles everyday repair needs and advanced technical faults across major device categories.
+              Whether your device is slow, physically damaged, not charging, or not powering on, we are ready to help.
+            </p>
+
+            <div class="grid cards-2" style="margin-top:24px">
+              <div class="card" style="padding:22px">
+                <h3>Popular Repairs</h3>
+                <p>Display replacement, battery replacement, charging port repair, camera repair, speaker and mic
+                  repair, data transfer, and device cleanup.</p>
+              </div>
+              <div class="card" style="padding:22px">
+                <h3>Advanced Support</h3>
+                <p>Thermal issues, liquid-damage checks, motherboard diagnosis, software recovery, storage upgrades, and
+                  performance optimization.</p>
+              </div>
+            </div>
+
+            <div class="brand-cloud">
+              <span class="brand-pill">Apple</span>
+              <span class="brand-pill">Samsung</span>
+              <span class="brand-pill">Huawei</span>
+              <span class="brand-pill">Xiaomi</span>
+              <span class="brand-pill">Dell</span>
+              <span class="brand-pill">HP</span>
+              <span class="brand-pill">Lenovo</span>
+              <span class="brand-pill">ASUS</span>
+            </div>
+
+            <div style="margin-top:26px">
+              <a class="btn btn-primary wa-link"
+                data-message="Hello FM Electronics, I want to discuss my device problem and place an order."
+                target="_blank" rel="noopener">
+                <svg class="icon">
+                  <use href="#i-whatsapp"></use>
+                </svg>
+                Order Now on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="dot"></span>Simple Process</div>
+          <h2>Fast booking, expert repair, smooth delivery</h2>
+          <p class="lead">We designed the experience to be easy: message us, confirm your repair, and get your device
+            back in reliable condition.</p>
+        </div>
+
+        <div class="grid cards-3">
+          <div class="process-step reveal">
+            <div class="step-num">01</div>
+            <h3>Message on WhatsApp</h3>
+            <p class="muted">Tap the Order Now button and tell us your device model and issue. We reply quickly with
+              guidance and next steps.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">02</div>
+            <h3>Diagnosis & Repair</h3>
+            <p class="muted">Our team checks the problem carefully, recommends the best fix, and performs the repair
+              with professional attention.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">03</div>
+            <h3>Pickup / Return</h3>
+            <p class="muted">Once complete, your device is ready for collection or arranged return, depending on your
+              service setup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="dot"></span>Why Customers Choose Us</div>
+          <h2>Designed for trust, speed, and premium service</h2>
+          <p class="lead">A professional repair business should feel reliable from the first click. FM Electronics
+            combines clear communication, strong design, and service quality customers can feel.</p>
+        </div>
+
+        <div class="grid cards-3">
+          <div class="card testimonial reveal">
+            <div class="stars">
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+            </div>
+            <p>"Very smooth service. I contacted them on WhatsApp, explained my phone issue, and got a fast response.
+              The repair was clean and professional."</p>
+            <div class="person">
+              <div class="avatar">AR</div>
+              <div>
+                <strong>Ali R.</strong><br>
+                <span class="muted">Smartphone customer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial reveal">
+            <div class="stars">
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+            </div>
+            <p>"My laptop had charging and heating problems. FM Electronics diagnosed it properly and explained
+              everything clearly. Great experience."</p>
+            <div class="person">
+              <div class="avatar">SM</div>
+              <div>
+                <strong>Sarah M.</strong><br>
+                <span class="muted">Laptop customer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial reveal">
+            <div class="stars">
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+              <svg class="icon">
+                <use href="#i-star"></use>
+              </svg>
+            </div>
+            <p>"Beautiful service style and quick communication. My tablet screen was replaced neatly, and the device
+              feels great again."</p>
+            <div class="person">
+              <div class="avatar">NK</div>
+              <div>
+                <strong>Nadia K.</strong><br>
+                <span class="muted">Tablet customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="dot"></span>FAQ</div>
+          <h2>Common questions about our repair service</h2>
+        </div>
+
+        <div class="faq reveal">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>How do I place an order for repair?</span>
+              <svg class="icon rotate">
+                <use href="#i-plus"></use>
+              </svg>
+            </button>
+            <div class="faq-answer" style="max-height: 180px;">
+              Click any <strong>Order Now</strong> button on this page. It opens WhatsApp with a ready message so you
+              can contact FM Electronics instantly and describe your device issue.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What devices do you repair?</span>
+              <svg class="icon rotate">
+                <use href="#i-plus"></use>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              We repair mobile phones, laptops, and tablets, including common hardware issues, power problems, software
+              faults, and many advanced repair cases.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How long does repair usually take?</span>
+              <svg class="icon rotate">
+                <use href="#i-plus"></use>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Many standard repairs can be completed the same day, while complex issues may require more diagnosis time
+              depending on parts and device condition.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you provide updates before repair?</span>
+              <svg class="icon rotate">
+                <use href="#i-plus"></use>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Yes. We aim to keep communication clear and practical, especially for diagnosis results, repair
+              recommendations, and progress updates.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+          <div class="cta-panel reveal">
+            <div class="eyebrow"><span class="dot"></span>Ready to Repair?</div>
+            <h2>Book your device repair with FM Electronics today</h2>
+            <p class="lead" style="margin-top:14px">
+              Need a screen replacement, battery change, charging repair, or full device diagnosis? Tap below and start
+              your order instantly on WhatsApp.
+            </p>
+
+            <div class="hero-actions" style="margin-top:28px">
+              <a class="btn btn-primary wa-link"
+                data-message="Hello FM Electronics, I want to order a repair service for my device. Please assist me."
+                target="_blank" rel="noopener">
+                <svg class="icon">
+                  <use href="#i-whatsapp"></use>
+                </svg>
+                Order Now
+              </a>
+              <a class="btn btn-dark" href="mailto:hello@fmelectronics.com">
+                <svg class="icon">
+                  <use href="#i-mail"></use>
+                </svg>
+                Email Inquiry
+              </a>
+            </div>
+
+            <div class="grid cards-3" style="margin-top:18px">
+              <div class="card" style="padding:18px">
+                <div class="mini-title"><svg class="icon">
+                    <use href="#i-clock"></use>
+                  </svg>Business Hours</div>
+                <p>Mon - Sat<br><span class="muted">10:00 AM - 11:00 PM</span></p>
+              </div>
+              <div class="card" style="padding:18px">
+                <div class="mini-title"><svg class="icon">
+                    <use href="#i-shield"></use>
+                  </svg>Service Style</div>
+                <p>Careful, clean<br><span class="muted">Professional handling</span></p>
+              </div>
+              <div class="card" style="padding:18px">
+                <div class="mini-title"><svg class="icon">
+                    <use href="#i-check"></use>
+                  </svg>Quick Response</div>
+                <p>WhatsApp first<br><span class="muted">Fast communication</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-panel reveal">
+            <div class="eyebrow"><span class="dot"></span>Contact Details</div>
+            <h2>Connect with us</h2>
+            <p class="lead" style="margin-top:10px">Use any of the options below for support, service questions, or
+              order confirmation.</p>
+
+            <div class="contact-list">
+              <a class="contact-item wa-link"
+                data-message="Hello FM Electronics, I would like to place an order for repair." target="_blank"
+                rel="noopener">
+                <span class="icon-wrap"><svg class="icon">
+                    <use href="#i-whatsapp"></use>
+                  </svg></span>
+                <span>
+                  <strong>WhatsApp Order</strong><br>
+                  <span class="muted">Instant message support</span>
+                </span>
+              </a>
+
+              <a class="contact-item" href="tel:+971544322462">
+                <span class="icon-wrap"><svg class="icon">
+                    <use href="#i-phone"></use>
+                  </svg></span>
+                <span>
+                  <strong>+971 54 432 2462</strong><br>
+                  <span class="muted">Call for quick help</span>
+                </span>
+              </a>
+
+              <a class="contact-item" href="mailto:mahmoodmobiletech@gmail.com">
+                <span class="icon-wrap"><svg class="icon">
+                    <use href="#i-mail"></use>
+                  </svg></span>
+                <span>
+                  <strong>mahmoodmobiletech@gmail.com</strong><br>
+                  <span class="muted">Email for business inquiries</span>
+                </span>
+              </a>
+
+              <div class="contact-item">
+                <span class="icon-wrap"><svg class="icon">
+                    <use href="#i-location"></use>
+                  </svg></span>
+                <span>
+                  <strong>FM Electronics, Bur Dubai</strong><br>
+                  <span class="muted">Premium mobile, laptop & tablet repair</span>
+                </span>
+              </div>
+            </div>
+
+            <div style="margin-top:24px">
+              <a class="btn btn-primary wa-link"
+                data-message="Hello FM Electronics, I am ready to book my repair service now." target="_blank"
+                rel="noopener" style="width:100%">
+                <svg class="icon">
+                  <use href="#i-whatsapp"></use>
+                </svg>
+                Start Order on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>© 2026 FM Electronics. All rights reserved.</div>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-wa wa-link" data-message="Hello FM Electronics, I want to order a repair service." target="_blank"
+    rel="noopener" aria-label="Order on WhatsApp">
+    <svg class="icon" style="width:28px;height:28px">
+      <use href="#i-whatsapp"></use>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
