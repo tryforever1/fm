@@ -25,6 +25,7 @@
       --radius: 24px;
       --radius-sm: 16px;
       --container: min(1180px, calc(100% - 32px));
+      --vh: 1vh;
     }
 
     * {
@@ -58,7 +59,8 @@
 
     .container {
       width: var(--container);
-      margin: 0 auto
+      margin: 0 auto;
+      min-width: 0
     }
 
     .section {
@@ -69,6 +71,8 @@
       max-width: 720px;
       margin: 0 auto 46px;
       text-align: center;
+      width: 100%;
+      box-sizing: border-box
     }
 
     .eyebrow {
@@ -84,6 +88,8 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       backdrop-filter: blur(10px);
+      white-space: normal;
+      flex-wrap: wrap
     }
 
     .eyebrow .dot {
@@ -133,7 +139,8 @@
 
     .grid {
       display: grid;
-      gap: 24px
+      gap: 24px;
+      width: 100%
     }
 
     .btn {
@@ -553,6 +560,8 @@
       box-shadow: var(--shadow);
       overflow: hidden;
       transition: .3s ease;
+      width: 100%;
+      min-width: 0
     }
 
     .card:hover {
@@ -596,6 +605,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 28px;
       align-items: stretch;
+      width: 100%;
+      min-width: 0
     }
 
     .about-box {
@@ -752,6 +763,8 @@
       grid-template-columns: 1.1fr .9fr;
       gap: 28px;
       align-items: stretch;
+      width: 100%;
+      min-width: 0
     }
 
     .cta-panel {
@@ -775,7 +788,8 @@
     .contact-list {
       display: grid;
       gap: 14px;
-      margin-top: 22px
+      margin-top: 22px;
+      width: 100%
     }
 
     .contact-item {
@@ -786,6 +800,9 @@
       border-radius: 18px;
       background: rgba(255, 255, 255, .04);
       border: 1px solid rgba(255, 255, 255, .08);
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box
     }
 
     .contact-item .icon-wrap {
@@ -838,6 +855,7 @@
       opacity: 0;
       transform: translateY(24px);
       transition: opacity .6s ease, transform .6s ease;
+      width: 100%
     }
 
     .reveal.visible {
@@ -930,48 +948,655 @@
       }
     }
 
-    @media (max-width: 560px) {
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch
+    @media (max-width: 768px) {
+      :root {
+        --container: min(100%, calc(100% - 24px));
       }
 
-      .btn {
+      .section {
+        padding: 60px 0
+      }
+
+      .section-head {
+        max-width: 100%;
+        margin: 0 auto 24px;
+        padding: 0
+      }
+
+      .grid {
+        gap: 16px
+      }
+
+      .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: auto
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 5vw, 3.5rem);
+      }
+
+      h2 {
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      }
+
+      .hero {
+        padding: 32px 0 50px
+      }
+
+      .hero-chips {
+        flex-wrap: wrap
+      }
+
+      .chip {
+        font-size: .9rem;
+        padding: 10px 12px
+      }
+
+      .glow {
+        filter: blur(30px);
+        opacity: .4
+      }
+
+      .device-card {
+        border-radius: 20px
+      }
+
+      .device-card .screen {
+        padding: 16px 14px 18px
+      }
+
+      .device-card .topbar {
+        padding: 10px 14px;
+        font-size: .88rem
+      }
+
+      .mini-title {
+        gap: 8px;
+        font-size: .95rem;
+        margin-bottom: 12px
+      }
+
+      .bars {
+        gap: 8px
+      }
+
+      .bar {
+        height: 10px
+      }
+
+      .tag {
+        padding: 6px 8px;
+        font-size: .8rem
+      }
+
+      .check {
+        gap: 10px
+      }
+
+      .check .bullet {
+        width: 24px;
+        height: 24px
+      }
+
+      .stat {
+        padding: 14px;
+        border-radius: 16px
+      }
+
+      .stat strong {
+        font-size: 1.2rem;
+        margin-bottom: 4px
+      }
+
+      .card {
+        padding: 20px;
+        border-radius: 20px
+      }
+
+      .service-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        margin-bottom: 14px
+      }
+
+      .service-icon .icon {
+        width: 22px;
+        height: 22px
+      }
+
+      .about-box {
+        padding: 24px;
+        border-radius: 24px
+      }
+
+      .cta-panel,
+      .info-panel {
+        padding: 24px;
+        border-radius: 24px;
         width: 100%
       }
 
-      .hero-stats {
+      .process-step {
+        padding: 24px;
+        border-radius: 20px
+      }
+
+      .step-num {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        font-size: 1.1rem
+      }
+
+      .feature-item {
+        padding: 12px 0;
         gap: 12px
       }
 
-      .hero-visual {
-        min-height: 450px
+      .feature-item h3 {
+        font-size: 1rem;
+        margin-bottom: 6px
       }
 
-      .laptop {
-        top: 88px;
-        height: 220px
+      .faq-question {
+        padding: 18px
       }
 
-      .tablet {
-        width: 190px;
-        height: 250px
+      .faq-answer {
+        padding: 0 18px
       }
 
-      .phone {
-        width: 130px;
-        height: 250px
-      }
-
-      .card,
-      .about-box,
-      .cta-panel,
-      .info-panel {
-        padding: 22px
+      .faq-item.active .faq-answer {
+        padding: 0 18px 18px
       }
 
       .contact-item {
-        align-items: flex-start
+        padding: 14px;
+        gap: 12px
+      }
+
+      .contact-item .icon-wrap {
+        width: 38px;
+        height: 38px
+      }
+
+      .cards-4,
+      .cards-3,
+      .cards-2 {
+        grid-template-columns: 1fr
+      }
+
+      .floating-wa {
+        width: 56px;
+        height: 56px;
+        right: 16px;
+        bottom: 16px
+      }
+
+      .floating-wa .icon {
+        width: 24px;
+        height: 24px
+      }
+
+      .nav {
+        height: 70px
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px
+      }
+
+      .btn {
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 14px;
+        font-size: .95rem
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --container: min(100%, calc(100% - 20px));
+      }
+
+      .section {
+        padding: 48px 0
+      }
+
+      .section-head {
+        max-width: 100%;
+        margin: 0 auto 28px
+      }
+
+      .grid {
+        gap: 14px
+      }
+
+      .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        align-items: auto
+      }
+
+      h1 {
+        font-size: clamp(1.5rem, 4vw, 2.8rem);
+        margin: 16px 0 14px
+      }
+
+      h2 {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        margin: 12px 0
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 10px
+      }
+
+      .lead {
+        font-size: 1rem;
+        line-height: 1.7
+      }
+
+      .hero {
+        padding: 24px 0 40px;
+        min-height: auto
+      }
+
+      .hero-grid {
+        gap: 24px
+      }
+
+      .eyebrow {
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 11px
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin: 22px 0 16px
+      }
+
+      .btn {
+        width: 100%;
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 12px;
+        font-size: .9rem
+      }
+
+      .hero-chips {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 14px
+      }
+
+      .chip {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: .88rem;
+        justify-content: center
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 100%;
+        margin-top: 20px
+      }
+
+      .stat {
+        padding: 12px;
+        border-radius: 14px;
+        text-align: center
+      }
+
+      .stat strong {
+        font-size: 1.1rem;
+        margin-bottom: 3px
+      }
+
+      .stat span {
+        font-size: .85rem
+      }
+
+      .hero-visual {
+        min-height: 380px;
+        position: relative;
+        margin-top: 24px
+      }
+
+      .laptop {
+        display: none
+      }
+
+      .tablet {
+        width: 160px;
+        height: 220px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-60%, -50%) rotate(-5deg);
+        position: absolute
+      }
+
+      .phone {
+        width: 120px;
+        height: 220px;
+        right: auto;
+        left: 50%;
+        bottom: auto;
+        top: 50%;
+        transform: translate(40%, -50%) rotate(3deg);
+        position: absolute
+      }
+
+      .glow {
+        display: none
+      }
+
+      .grid {
+        gap: 16px
+      }
+
+      .cards-4,
+      .cards-3,
+      .cards-2 {
+        grid-template-columns: 1fr
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 16px
+      }
+
+      .service-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        margin-bottom: 10px
+      }
+
+      .service-icon .icon {
+        width: 20px;
+        height: 20px
+      }
+
+      .service-link {
+        margin-top: 12px;
+        font-size: .9rem
+      }
+
+      .about-box {
+        padding: 18px;
+        border-radius: 18px;
+        margin-bottom: 18px
+      }
+
+      .cta-panel,
+      .info-panel {
+        padding: 18px;
+        border-radius: 16px;
+        width: 100%
+      }
+
+      .feature-list {
+        gap: 12px;
+        margin-top: 16px
+      }
+
+      .feature-item {
+        gap: 10px;
+        padding: 10px 0
+      }
+
+      .feature-item h3 {
+        font-size: .95rem
+      }
+
+      .feature-item p {
+        font-size: .85rem
+      }
+
+      .brand-cloud {
+        gap: 8px;
+        margin-top: 16px
+      }
+
+      .brand-pill {
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: .85rem
+      }
+
+      .process-step {
+        padding: 18px;
+        border-radius: 16px;
+        text-align: center
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        margin: 0 auto 12px;
+        font-size: 1rem
+      }
+
+      .process-step p {
+        font-size: .85rem
+      }
+
+      .card.testimonial {
+        padding: 16px
+      }
+
+      .stars {
+        gap: 4px;
+        margin-bottom: 12px
+      }
+
+      .person {
+        gap: 10px;
+        margin-top: 12px
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: .9rem
+      }
+
+      .contact-item {
+        align-items: flex-start;
+        padding: 12px;
+        gap: 10px;
+        flex-direction: row
+      }
+
+      .contact-list {
+        gap: 12px;
+        margin-top: 16px
+      }
+
+      .contact-item .icon-wrap {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        min-width: 36px;
+        margin-top: 2px
+      }
+
+      .contact-item .icon-wrap .icon {
+        width: 18px;
+        height: 18px
+      }
+
+      .faq-question {
+        padding: 16px;
+        gap: 12px
+      }
+
+      .faq-question span {
+        font-size: .9rem
+      }
+
+      .faq-answer {
+        padding: 0 16px;
+        font-size: .85rem
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 0 16px 16px
+      }
+
+      .footer {
+        padding: 20px 0 30px;
+        font-size: .85rem
+      }
+
+      .footer-row {
+        gap: 12px;
+        justify-content: center;
+        text-align: center
+      }
+
+      .floating-wa {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 14px;
+        box-shadow: 0 12px 24px rgba(37, 211, 102, .28)
+      }
+
+      .floating-wa .icon {
+        width: 22px;
+        height: 22px
+      }
+
+      .nav {
+        height: 64px;
+        gap: 16px
+      }
+
+      .brand {
+        gap: 10px
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px
+      }
+
+      .brand strong {
+        font-size: .95rem
+      }
+
+      .brand small {
+        font-size: 10px
+      }
+
+      .menu-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px
+      }
+
+      .nav.open {
+        padding: 12px 0 16px;
+        gap: 12px
+      }
+
+      .nav.open .nav-links {
+        gap: 12px;
+        padding-top: 8px
+      }
+
+      .nav.open .nav-links a {
+        font-size: .9rem
+      }
+    }
+
+    @media (max-width: 390px) {
+      :root {
+        --container: min(100%, calc(100% - 16px));
+      }
+
+      .section {
+        padding: 36px 0
+      }
+
+      .section-head {
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+
+      .grid {
+        gap: 12px
+      }
+
+      .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      body {
+        font-size: 14px
+      }
+
+      h1 {
+        font-size: clamp(1.3rem, 3.5vw, 2.2rem)
+      }
+
+      h2 {
+        font-size: clamp(1rem, 2.5vw, 1.7rem)
+      }
+
+      h3 {
+        font-size: .95rem
+      }
+
+      .cards-4,
+      .cards-3,
+      .cards-2 {
+        grid-template-columns: 1fr
+      }
+
+      .cta-panel,
+      .info-panel {
+        padding: 14px;
+        border-radius: 14px;
+        width: 100%
+      }
+
+      .contact-item {
+        padding: 10px
+      }
+
+      .grid {
+        gap: 12px
+      }
+
+      .nav {
+        height: 56px
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px
+      }
+
+      .floating-wa {
+        width: 48px;
+        height: 48px;
+        right: 12px;
+        bottom: 12px
       }
     }
   </style>
@@ -1784,12 +2409,14 @@
   </a>
 
   <script>
+    // WhatsApp link configuration
     const waBase = "https://wa.me/971544322462?text=";
     document.querySelectorAll(".wa-link").forEach(link => {
       const msg = link.dataset.message || "Hello FM Electronics, I want to order a repair service.";
       link.href = waBase + encodeURIComponent(msg);
     });
 
+    // Mobile menu functionality
     const header = document.getElementById("header");
     const nav = document.getElementById("nav");
     const menuBtn = document.getElementById("menuBtn");
@@ -1802,6 +2429,7 @@
         : '<use href="#i-menu"></use>';
     });
 
+    // Close menu when links are clicked
     document.querySelectorAll('.nav-links a').forEach(a => {
       a.addEventListener('click', () => {
         nav.classList.remove('open');
@@ -1809,10 +2437,12 @@
       });
     });
 
+    // Header scroll effect
     window.addEventListener("scroll", () => {
       header.classList.toggle("scrolled", window.scrollY > 10);
     });
 
+    // Intersection observer for reveal animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1823,19 +2453,62 @@
 
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
+    // FAQ accordion functionality with improved mobile support
     document.querySelectorAll(".faq-item").forEach(item => {
       const btn = item.querySelector(".faq-question");
       const answer = item.querySelector(".faq-answer");
-      btn.addEventListener("click", () => {
+      
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
         const active = item.classList.contains("active");
+        
+        // Close all other items
         document.querySelectorAll(".faq-item").forEach(i => {
           i.classList.remove("active");
           i.querySelector(".faq-answer").style.maxHeight = null;
         });
+        
+        // Open clicked item if not already open
         if (!active) {
           item.classList.add("active");
           answer.style.maxHeight = answer.scrollHeight + "px";
+          
+          // Scroll to item on mobile if needed
+          if (window.innerWidth <= 768) {
+            setTimeout(() => {
+              btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+          }
         }
+      });
+
+      // Ensure keyboard accessibility
+      btn.setAttribute('role', 'button');
+      btn.setAttribute('tabindex', '0');
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
+    // Prevent layout shift on scroll by adjusting viewport height for mobile keyboards
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+    
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    });
+
+    // Improve touch interactions
+    document.querySelectorAll('.btn, .card, .chip').forEach(el => {
+      el.addEventListener('touchstart', function() {
+        this.style.opacity = '0.8';
+      });
+      el.addEventListener('touchend', function() {
+        this.style.opacity = '1';
       });
     });
   </script>
